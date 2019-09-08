@@ -65,9 +65,7 @@ function watcher() {
     watch("src/scripts/*.js", parallel(stylesVendor));
 
     watch("src/views/**/*.html", parallel(html));
-    // watch("dist/*.html").change(sync.reload())
 
 }
 
-// exports.watcher = watcher;
 exports.default = series(clean, parallel(html, js, stylesVendor, scriptsVendor, stylesApp), watcher);
