@@ -25,7 +25,7 @@
                                     <option value="7">7-cистема</option>
                                     <option value="8">8-cистема</option>
                                     <option value="9">9-cистема</option>
-                                    <option value="10">10-cистема</option>
+                                    <option value="10" selected>10-cистема</option>
                                     <option value="11">11-cистема</option>
                                     <option value="12">12-cистема</option>
                                     <option value="13">13-cистема</option>
@@ -39,6 +39,7 @@
                 </div>
             </form>
         </div>
+
         <div class="col-xs-6 second">
             <form class="form-horizontal">
                 <div class="row">
@@ -47,7 +48,7 @@
                             <label class="col-xs-12 control-label">Вихідна система числення</label>
                             <div class="col-xs-12">
                                 <select class="form-control" id="output">
-                                    <option value="2">2-cистема</option>
+                                    <option value="2" selected>2-cистема</option>
                                     <option value="3">3-cистема</option>
                                     <option value="4">4-cистема</option>
                                     <option value="5">5-cистема</option>
@@ -69,18 +70,25 @@
                 </div>
             </form>
         </div>
+
+        <div class="col-xs-12 form-group">
+            <input type="text" class="form-control" id="user-number" placeholder="Ваше число">
+        </div>
+
         <div class="col-xs-12 ">
             <div class="row">
 
                 <div class="col-xs-6">
                     <button type="button"
-                            class="btn btn-default btn-block">
+                            class="btn btn-default btn-block"
+                            id="clear">
                         Очистити
                     </button>
                 </div>
                 <div class="col-xs-6">
                     <button type="button"
-                            class="btn btn-primary btn-block">
+                            class="btn btn-primary btn-block"
+                            id="calculate">
                         Розрахувати
                     </button>
                 </div>
@@ -92,17 +100,17 @@
 
 
 <!-- @@block= output -->
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="panel-group" id="output-rez">
     <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingOne">
+        <div class="panel-heading" id="headingOne">
             <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
-                   aria-expanded="true" aria-controls="collapseOne">
+                <a data-toggle="collapse" href="#collapseOne"
+                   aria-controls="collapseOne">
                     Collapsible Group Item #1
                 </a>
             </h4>
         </div>
-        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div id="collapseOne" class="panel-collapse collapse in">
             <div class="panel-body">
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
                 moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -114,15 +122,15 @@
         </div>
     </div>
     <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingTwo">
+        <div class="panel-heading" id="headingTwo">
             <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                   aria-expanded="false" aria-controls="collapseTwo">
+                <a data-toggle="collapse" href="#collapseTwo"
+                   aria-controls="collapseOne">
                     Collapsible Group Item #2
                 </a>
             </h4>
         </div>
-        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div id="collapseTwo" class="panel-collapse collapse">
             <div class="panel-body">
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
                 moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
@@ -134,15 +142,15 @@
         </div>
     </div>
     <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="headingThree">
+        <div class="panel-heading" id="headingThree">
             <h4 class="panel-title">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
-                   aria-expanded="false" aria-controls="collapseThree">
+                <a data-toggle="collapse" href="#collapseThree"
+                   aria-controls="collapseOne">
                     Collapsible Group Item #3
                 </a>
             </h4>
         </div>
-        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div id="collapseThree" class="panel-collapse collapse">
             <div class="panel-body">
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
                 moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.

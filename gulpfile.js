@@ -16,7 +16,7 @@ function html() {
 function js() {
     return src("src/scripts/**/*.js")
         .pipe(plugins.concat("app.min.js"))
-        .pipe(plugins.uglify())
+        // .pipe(plugins.uglify())
         .pipe(dest("dist/js"))
         .pipe(sync.stream())
 }
@@ -62,7 +62,7 @@ function watcher() {
     });
     watch("src/styles/**/*.less", parallel(stylesApp));
 
-    watch("src/scripts/*.js", parallel(stylesVendor));
+    watch("src/scripts/*.js", parallel(js));
 
     watch("src/views/**/*.html", parallel(html));
 
